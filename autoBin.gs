@@ -1,5 +1,6 @@
 // Gmail Auto-Bin
 // Move emails to trash with label that is older than X days.
+// https://github.com/dgibbs64/gmail-scripts
 
 function autoBin() {
     // ######## Settings ########

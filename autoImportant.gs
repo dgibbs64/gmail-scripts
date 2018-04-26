@@ -1,5 +1,6 @@
 // Gmail Auto-Important
 // Makes emails with a label Important or Unimportant
+// https://github.com/dgibbs64/gmail-scripts
 
 // Makes emails with a label Unimportant
 function autoUnImportant() {

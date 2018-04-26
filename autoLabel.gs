@@ -1,5 +1,6 @@
 // Gmail Auto-Label
 // Applies a new label to emails with an existing label.
+// https://github.com/dgibbs64/gmail-scripts
 
 function autoLabel() {
     // ######## Settings ########

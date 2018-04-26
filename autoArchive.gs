@@ -1,6 +1,7 @@
 // Gmail Auto-Archive
-// Archives emails older than X days from inbox
-// Reccomend running once a day
+// Archives emails older than X days from inbox.
+// Recommend running once a day.
+// https://github.com/dgibbs64/gmail-scripts
 
 // Unread emails older than Days in inbox are archived.
 function autoArchiveDays() {

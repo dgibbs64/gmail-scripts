@@ -1,6 +1,7 @@
 // Gmail Auto-NoLabel
-// Labels any emails with no label as "No Label"
-// Removes "No Label" if a label is added
+// Labels any emails with no label as "No Label".
+// Removes "No Label" if a label is added.
+// https://github.com/dgibbs64/gmail-scripts
 
 function autoNoLabel() {
     // ######## Settings ########

@@ -1,5 +1,5 @@
 // Gmail Auto-Label
-// Applies a new label to emails with an existing label.
+// autoLabel - Applies a new label to emails with an existing label.
 // https://github.com/dgibbs64/gmail-scripts
 
 function autoLabel() {
@@ -10,6 +10,7 @@ function autoLabel() {
       "notifications-brief",
       "notifications-github",
       "notifications-security"
+        "notifications-updates"
     ];
 
     var newLabel = "Auto Bin"

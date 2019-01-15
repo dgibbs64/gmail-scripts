@@ -4,7 +4,7 @@
 // https://github.com/dgibbs64/gmail-scripts
 
 // Makes emails with a label Unimportant
-function autoUnImportant() {
+function autoUnimportant() {
     // ######## Settings ########
 
         var Label = "Auto Bin"
@@ -16,7 +16,7 @@ function autoUnImportant() {
     for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
          threads[t].markUnimportant(); // Mark Unimportant
     }
-    Logger.log(threads.length + " threads with label " +Label+ " marked Unimportant" );
+    Logger.log(threads.length + " threads with label " +Label+ " marked unimportant" );
 }
 
 // Makes emails with a label important
@@ -32,5 +32,5 @@ function autoImportant() {
     for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
          threads[t].markImportant(); // Mark Important
     }
-    Logger.log(threads.length + " threads with label " +Label+ " marked Important" );
+    Logger.log(threads.length + " threads with label " +Label+ " marked important" );
 }

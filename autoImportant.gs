@@ -1,5 +1,6 @@
 // Gmail Auto-Important
-// Makes emails with a label Important or Unimportant
+// 1. autoUnimportant - Makes emails with a label unimportant
+// 2. autoImportant - Makes emails with a label important
 // https://github.com/dgibbs64/gmail-scripts
 
 // Makes emails with a label Unimportant
@@ -12,7 +13,7 @@ function autoUnImportant() {
 
     var batchSize = 100; // process up to 100 threads at once
     var threads = GmailApp.search('label:'+Label+''); // find threads with label and older than X days
-    for (t = 0; t < threads.length; t++) { // loop though each batch of threads
+    for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
          threads[t].markUnimportant(); // Mark Unimportant
     }
     Logger.log(threads.length + " threads with label " +Label+ " marked Unimportant" );
@@ -28,7 +29,7 @@ function autoImportant() {
 
     var batchSize = 100; // process up to 100 threads at once
     var threads = GmailApp.search('label:'+Label+''); // find threads with label and older than X days
-    for (t = 0; t < threads.length; t++) { // loop though each batch of threads
+    for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
          threads[t].markImportant(); // Mark Important
     }
     Logger.log(threads.length + " threads with label " +Label+ " marked Important" );

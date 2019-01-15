@@ -21,7 +21,7 @@ function autoLabel() {
         var batchSize = 100; // process 100 threads at once
         var threads = GmailApp.search('label:'+existingLabel[l]+''); // find threads with current label
         var threadLabel = GmailApp.getUserLabelByName(newLabel);
-        for (t = 0; t < threads.length; t++) { // loop though each batch of threads
+        for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
             threads[t].addLabel(threadLabel); // apply new label
         }
         Logger.log(threads.length+ " threads added to " +newLabel);

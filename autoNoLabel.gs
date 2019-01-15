@@ -11,8 +11,8 @@ function autoNoLabel() {
     // ##### End Settings #######
 
     var batchSize = 100; // process up to 100 threads at once
-  var threads = GmailApp.search('has:nouserlabels NOT is:chat'); // find threads in inbox
-  for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
+    var threads = GmailApp.search('has:nouserlabels NOT is:chat'); // find threads in inbox
+    for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
     Logger.log("Found email with no label: applying the " +Label+ " label");
     var threadLabel = GmailApp.getUserLabelByName(Label);
     threads[t].addLabel(threadLabel); // apply new label

@@ -4,7 +4,7 @@
 // Recommend running once a day.
 // https://github.com/dgibbs64/gmail-scripts
 
-// Unread emails older than Days in inbox are archived.
+// Archives emails older than X days from inbox.
 function autoArchiveDays() {
     // ######## Settings ########
 
@@ -17,15 +17,15 @@ function autoArchiveDays() {
     for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
         GmailApp.moveThreadsToArchive(threads.slice(t, t+batchSize)); // move thread to archive
     }
-    Logger.log(threads.length + " unread threads older than " +Days+ " days moved to archive from Inbox");
+    Logger.log(threads.length + " threads older than " +Days+ " days have been moved to archive");
 }
 
-// Read emails in inbox are archived.
+// Archives email that have been read
 function autoArchiveRead() {
     var batchSize = 100; // process up to 100 threads at once
     var threads = GmailApp.search('label:read label:inbox'); // find threads in inbox
     for (t = 0; t < threads.length; t+=batchSize) { // loop though each batch of threads
         GmailApp.moveThreadsToArchive(threads.slice(t, t+batchSize)); // move thread to archive
     }
-    Logger.log(threads.length + " read threads moved to archive from Inbox");
+    Logger.log(threads.length + " read threads have been moved to archive");
 }

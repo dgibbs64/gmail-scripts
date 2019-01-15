@@ -1,6 +1,6 @@
 // Gmail Auto-Archive
-// 1. Archives emails older than X days from inbox.
-// 2. Archives email that have been read.
+// 1. autoArchiveDays - Archives emails older than X days from inbox.
+// 2. autoArchiveRead - Archives email that have been read.
 // Recommend running once a day.
 // https://github.com/dgibbs64/gmail-scripts
 
